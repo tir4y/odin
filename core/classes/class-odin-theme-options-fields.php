@@ -228,7 +228,7 @@ class Odin_Theme_Options_Fields {
 		$multiple = ( in_array( 'multiple', $attrs ) ) ? '[]' : '';
 
 		$html = sprintf( '<select id="%1$s" name="%2$s[%1$s]%3$s"%4$s>', $id, $tab, $multiple, self::attributes( $attrs ) );
-		foreach( $args['options'] as $key => $label ) {
+		foreach ( $args['options'] as $key => $label ) {
 			$key = sanitize_title( $key );
 
 			$html .= sprintf( '<option value="%s"%s>%s</option>', $key, selected( $current, $key, false ), $label );
